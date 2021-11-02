@@ -1,22 +1,12 @@
-
-// typescript - Type safe javascript'in uzerine gelistirilmistir. (Vue-Typescript orani daha fazla, React-Ecmascript genelde, community genelde Angular'i-Typescript ile kullaniyor)
-
-// SPA - Single Page Application
-// SPA diyince React,Angular,Vue anlamamiz gerekiyor.
-// Javascript file based bir dildir.
-
-// XML JSON tarayicilar ikisinide tanir ama gunumuzde artik JSON
-
-//JS Type safe degildir.
+//JS is not type safe.
 let sayi1=10;
 sayi1="Berkay Ersoy";
 
-//Object notation, bu bir obje
+//Object notation
 let student = {id:1, name:"Berkay"};
 //console.log(student);
 
-//undefined boyle bir sey yok demek
-//null referansi var bellekte ama degeri yok demek
+//null means has a reference but not a value
 function save(puan=10,ogrenci) {
     console.log(ogrenci.name + " : " + puan)
 }
@@ -31,28 +21,24 @@ let students2 = [student,
     {city:"Bordeaux"}]
 //console.log(students2)
 
-//rest parametre konusu
-//rest together, tek tek verilen parametreleri bir arraymis gibi aliyor ... koyunca
-//javada params
-//C# varArgs
-//python **args **kwargs
+//rest together, takes the given values as an array
 let showProducts = function(id,...products) {
     console.log(id)
     console.log(products)
 }
 
-//console.log(typeof showProducts) turunu gormek icin typeof kullaniyoruz
+//console.log(typeof showProducts) to see the type, we use typeof
 // showProducts(10,"Elma","Armut","Karpuz")
 
 //spread
-//spread, array olarak verilen degerleri ayristirmaya yariyor, array icerisindeki degerleri ayristiriyor
+//spread, spreads the values that are given as an array
 // let points = [1,2,3,4,50,222,14,65,95,2,3,4]
 // console.log(...points)
 // console.log(Math.max(...points))
 // console.log(..."ABC","D","E","F","G",..."HIJKLMNOPRS")
 
 //destructuring
-// elimizdeki arrayin degerlerini degiskene atamamiza yariyor, Array'i destruct ediyoruz, parcaliyoruz
+//to assign the values of the array to variables
 let populations = [10000,20000,30000,[40000,50000]]
 let [small,medium,high,[veryHigh,veryVeryHigh]] = populations
 console.log(small)
@@ -70,8 +56,7 @@ let category = {id:1, name:"Drink"}
 //console.log(category.id)
 //console.log(category["name"])
 
-// objeyi destruct etme yontemi, ayni array gibi ama obje notasyonu kullaniyoruz, kategori objesinin id ve name degerlerini degiskenlere atadik, id ve name, tek tek degiskenlere atandi.
-// Redux mimarisinde cokca kullanacagiz.
+//how to destruct an object
 let {id,name} = category
 //console.log(id)
 //console.log(name)

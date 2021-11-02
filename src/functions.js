@@ -1,10 +1,10 @@
-//productName="Elma" default deger
-//default parametre sona yazilir
+//productName="Elma" is default
+//default param is written at the end
 function addToCart(quantity,productName="Elma"){
     console.log("Sepete eklendi : " + productName + ", " + "adet " + quantity);
 }
 
-//addToCart() //undefined JS'te bu error vermez
+//addToCart() //undefined, doesn't pop up a error in JS
 //addToCart("Yumurta",10)
 //addToCart("Karpuz")
 
@@ -20,7 +20,7 @@ let sayHello2 = function (params) {
 //sayHello2()
 
 
-//Fonksiyon
+//Function
 function addToCart2(productName, quantity, unitPrice){
 }
 //addToCart2("Elma",5,1)
@@ -39,12 +39,12 @@ function addToCart3(product){
 let product2 = {productName:"Elma", unitPrice:1, quantity:5}
 let product3 = {productName:"Elma", unitPrice:1, quantity:5}
 
-// REFERANS TIP, OBJELER REFERANS TIPTIR
+// REFERENCE TYPE
 product2 = product3
 product2.productName = "KARPUZ"
 //console.log(product3.productName)
 
-// SAYILAR DEGER TIPTIR
+// NUMBERS ARE VALUE TYPE
 let sayi1 = 10
 let sayi2 = 20
 sayi1 = sayi2
@@ -56,7 +56,7 @@ function addToCart4(products) {
     console.log(products)
 }
 
-//array icerisinde objeler
+//objects inside the array
 let products = [
     {productName:"Elma", unitPrice:1, quantity:5},
     {productName:"Armut", unitPrice:1, quantity:5},
@@ -66,7 +66,7 @@ let products = [
 //addToCart4(products);
 
 
-//rest operatoru, rest'i hep sona yaz mantiken hepsini almasin gelen degerlerin
+//rest operator, put the rest at the end so it will not take all the given parameters first
 function add(bisey,...numbers) {
     let total=0;
     for (let i=0; i<numbers.length; i++){

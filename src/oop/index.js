@@ -1,8 +1,7 @@
 class Customer{
     constructor(id,customerNumber){
-        //this demek instance'a karsilik gelir, mesela customer239
-        //bu bir prototyping ozelligi
-        //saf JSte class diye bir sey yok bunu fonksiyon ile yapiyoruz
+        //this keyword is for the instance, for ex. customer239
+        //this is a prototyping attribute
         this.id = id;
         this.customerNumber = customerNumber;
     }
@@ -15,7 +14,7 @@ console.log(customer239.customerNumber)
 customer239.name ="Berkay Ersoy"
 console.log(customer239.name)
 
-//static prototyping Class'a yapilan prototyping
+//static prototyping, prototyping that is done to a Class
 Customer.bisey = "Bisey"
 console.log(Customer.bisey)
 
