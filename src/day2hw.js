@@ -13,6 +13,8 @@ function checkPrime(c,primeNums=[],noPrimeNums=[]) {
     }
 }
 
+
+
 //finds the sum of the number's dividers and returns it
 function sumOfDividers(k) {
     let sumOfDividersOfK = 0;
@@ -23,6 +25,8 @@ function sumOfDividers(k) {
     }
     return sumOfDividersOfK;
 }
+
+
 
 //1- JavaScript ile istediğiniz kadar sayı parametre gönderebileceğiniz bir fonksiyon yazınız. Bu fonksiyona gönderdiğiniz her sayı için çıktı olarak asal olup olmadığını yazınız. (Araştırma konusu : şart blokları : if )
 function isNumbersPrime(...sentNumbersArray) {
@@ -38,6 +42,8 @@ function isNumbersPrime(...sentNumbersArray) {
 }
 isNumbersPrime(3,5,6,11,16)
 
+
+
 //2- Parametre olarak girilen iki sayının arkadaş sayılar olup olmadığını bulan programı yazınız.
 function isAmicable(x,y) {
     let dividersOfX = sumOfDividers(x);
@@ -52,6 +58,8 @@ function isAmicable(x,y) {
 }
 isAmicable(220,284)
 
+
+
 //3- 1000'e kadarki tüm mükemmel sayıları listeleyen programı yazınız.
 function isPerfect(m) {
     let dividersOfM = sumOfDividers(m);
@@ -64,6 +72,8 @@ function isPerfect(m) {
     
 }
 isPerfect(6);
+
+
 
 //4- 1000'e kadarki tüm asal sayıları listeleyen programı yazınız.
 function allNumbersTill1000() {
