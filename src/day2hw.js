@@ -1,12 +1,12 @@
 //checks if the number is prime and adds it to the given array
-function checkPrime(c,primeNums=[],noPrimeNums=[]) {
-    for (let y=2; y<=c; y++) {
-        if (c==2){
+function checkPrime(c, primeNums = [], noPrimeNums = []) {
+    for (let y = 2; y <= c; y++) {
+        if (c == 2) {
             primeNums.push(2)
-        } else if (c==y+1){
+        } else if (c == y + 1) {
             primeNums.push(c)
             break
-        } else if (c%y==0){
+        } else if (c % y == 0) {
             noPrimeNums.push(c)
             break
         }
@@ -18,8 +18,8 @@ function checkPrime(c,primeNums=[],noPrimeNums=[]) {
 //finds the sum of the number's dividers and returns it
 function sumOfDividers(k) {
     let sumOfDividersOfK = 0;
-    for (let i=1; i<k; i++){ 
-        if(k % i == 0){
+    for (let i = 1; i < k; i++) {
+        if (k % i == 0) {
             sumOfDividersOfK += i
         }
     }
@@ -32,31 +32,31 @@ function sumOfDividers(k) {
 function isNumbersPrime(...sentNumbersArray) {
     let primeArray = [];
     let notPrimeArray = [];
-    
-    for (let i=0; i<sentNumbersArray.length; i++) {
-        checkPrime(sentNumbersArray[i],primeArray,notPrimeArray)
+
+    for (let i = 0; i < sentNumbersArray.length; i++) {
+        checkPrime(sentNumbersArray[i], primeArray, notPrimeArray)
     }
 
     console.log("Array of prime numbers:" + primeArray)
     console.log("Array on NON prime numbers:" + notPrimeArray)
 }
-isNumbersPrime(3,5,6,11,16)
+isNumbersPrime(3, 5, 6, 11, 16)
 
 
 
 //2- Parametre olarak girilen iki sayının arkadaş sayılar olup olmadığını bulan programı yazınız.
-function isAmicable(x,y) {
+function isAmicable(x, y) {
     let dividersOfX = sumOfDividers(x);
     let dividersOfY = sumOfDividers(y);
-            
-    if(dividersOfX==y && dividersOfY==x){
+
+    if (dividersOfX == y && dividersOfY == x) {
         console.log(x + " " + y + " are amicable numbers.")
     } else {
         console.log(x + " " + y + " are NOT amicable numbers.")
     }
-    
+
 }
-isAmicable(220,284)
+isAmicable(220, 284)
 
 
 
@@ -64,12 +64,12 @@ isAmicable(220,284)
 function isPerfect(m) {
     let dividersOfM = sumOfDividers(m);
 
-    if(dividersOfM == m){
+    if (dividersOfM == m) {
         console.log(m + " is a perfect number.")
-    } else{
+    } else {
         console.log(m + " is NOT a perfect number.")
     }
-    
+
 }
 isPerfect(6);
 
@@ -79,11 +79,11 @@ isPerfect(6);
 function allNumbersTill1000() {
     let finalArray = [];
 
-    for (let z=2; z<1000; z++) {
-        checkPrime(z,finalArray);
+    for (let z = 2; z < 1000; z++) {
+        checkPrime(z, finalArray);
     }
 
-    console.log("List of prime numbers till 1000: " +finalArray);
+    console.log("List of prime numbers till 1000: " + finalArray);
 }
 allNumbersTill1000();
 

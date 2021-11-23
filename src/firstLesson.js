@@ -13,8 +13,8 @@ const euroDun = 10
 //euroDun 11, doesn't work bc of const
 console.log(euroDun)
 
-let konutKredileri = ["Konut Kredisi","Emlak Konut Kredisi","Kamu Konut Kredisi"]
+let konutKredileri = ["Konut Kredisi", "Emlak Konut Kredisi", "Kamu Konut Kredisi"]
 
-for (let i=0; i<konutKredileri.length; i++) {
+for (let i = 0; i < konutKredileri.length; i++) {
     console.log(konutKredileri[i])
 }
